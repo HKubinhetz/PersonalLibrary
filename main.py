@@ -1,7 +1,6 @@
 from flask import Flask, render_template, request, redirect, url_for
 
 app = Flask(__name__)
-
 all_books = []
 
 
@@ -12,6 +11,9 @@ def home():
 
 @app.route("/add", methods=["GET", "POST"])
 def add():
+    if request.method == "POST":
+        print(request.data)
+
     return render_template("add.html")
 
 
