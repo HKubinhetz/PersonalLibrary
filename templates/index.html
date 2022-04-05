@@ -21,7 +21,9 @@
 
         <ul>
             {% for book in books: %}
-                <li>{{ book["title"] }} - {{ book["author"] }} - {{ book["rating"] }} </li>
+                <li>{{ book["title"] }} - {{ book["author"] }} - {{ book["rating"] }}/10 </li>
+                <p><a href="/edit/{{book['bookid']}}">Delete</a> - <a href="/edit/{{book['bookid']}}">Edit Rating</a></p>
+
             {% endfor %}
 
         </ul>
