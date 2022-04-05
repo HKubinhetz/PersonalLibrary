@@ -2,20 +2,6 @@ from flask import Flask, render_template, request, redirect, url_for
 from flask_sqlalchemy import SQLAlchemy
 
 app = Flask(__name__)
-
-# todo - use commented code below to implement all the required functionalities
-
-# # Update a given entry:
-# book_to_update = Book.query.filter_by(title="Harry Potter").first()
-# book_to_update.title = "Harry Potter and the Chamber of Secrets"
-# db.session.commit()
-
-# # Delete a given entry:
-# book_id = 3
-# book_to_delete = Book.query.get(book_id)
-# db.session.delete(book_to_delete)
-# db.session.commit()
-
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///new-books-collection.db'
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 db = SQLAlchemy(app)
@@ -66,16 +52,29 @@ def add():
 
 
 # todo - capturar esses caras e criar botões no HTML pra mostrar somente o livro que eu quiser editar/deletar
+# todo - usar os códigos comentados abaixo para implementar a funcionalidade
+# todo - personalizar um pouco melhor o site
+
 @app.route('/edit/<bookid>')
 def edit(bookid):
     books = query_books()
-    return render_template("edit.html", books=books)
+    bookid = int(bookid)
+    return render_template("edit.html", books=books, bookid=bookid)
+    # # Update a given entry:
+    # book_to_update = Book.query.filter_by(title="Harry Potter").first()
+    # book_to_update.title = "Harry Potter and the Chamber of Secrets"
+    # db.session.commit()
 
 
 @app.route('/delete/<bookid>')
 def delete(bookid):
     books = query_books()
-    return render_template("delete.html", books=books)
+    return render_template("delete.html", books=books, bookid=bookid)
+    # # Delete a given entry:
+    # book_id = 3
+    # book_to_delete = Book.query.get(book_id)
+    # db.session.delete(book_to_delete)
+    # db.session.commit()
 
 
 if __name__ == "__main__":
