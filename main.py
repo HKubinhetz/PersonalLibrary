@@ -61,8 +61,8 @@ def edit(bookid):
     bookid = int(bookid)
     return render_template("edit.html", books=books, bookid=bookid)
     # # Update a given entry:
-    # book_to_update = Book.query.filter_by(title="Harry Potter").first()
-    # book_to_update.title = "Harry Potter and the Chamber of Secrets"
+    # book_to_update = Book.query.filter_by(title="Harry Potter").first()      # Atualizar pro ID!
+    # book_to_update.title = "Harry Potter and the Chamber of Secrets"         # Retorno do HTML Form
     # db.session.commit()
 
 
@@ -72,8 +72,8 @@ def delete(bookid):
     return render_template("delete.html", books=books, bookid=bookid)
     # # Delete a given entry:
     # book_id = 3
-    # book_to_delete = Book.query.get(book_id)
-    # db.session.delete(book_to_delete)
+    # book_to_delete = Book.query.get(book_id)      # Atualizar pro ID!
+    # db.session.delete(book_to_delete)             # Retorno do HTML Form
     # db.session.commit()
 
 
