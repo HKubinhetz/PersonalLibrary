@@ -12,6 +12,11 @@
 </head>
 <body>
     <p>Here we'll be deleting a title from the booklist!</p>
-    <p>{{ books[bookid | int -1]["title"] }} - {{ books[bookid | int -1]["author"] }} - {{ books[bookid | int -1]["rating"] }}/10</p>
+    <p>{{ book["title"] }} - {{ book["author"] }} - {{ book["rating"] }}/10</p>
+    <p>Are you sure you want to delete?</p>
+    <form action="" method="POST">
+        <button type="submit">Confirm Delete</button>
+        <a href="/">Cancel</a>
+    </form>
 </body>
 </html>

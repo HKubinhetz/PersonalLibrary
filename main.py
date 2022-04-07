@@ -1,3 +1,5 @@
+# todo - documentar e embelezar
+
 from flask import Flask, render_template, request, redirect, url_for
 from flask_sqlalchemy import SQLAlchemy
 
@@ -28,6 +30,19 @@ def query_books():
     return all_books
 
 
+def find_book(books, link_id):
+    for book in books:
+        print(books)
+        print(link_id)
+        if book['bookid'] == int(link_id):
+            selected_book = book
+            print(selected_book['title'])
+            return selected_book
+
+    print("Nao encontrei")
+    return "Book not found"
+
+
 @app.route('/')
 def home():
     books = query_books()
@@ -51,30 +66,39 @@ def add():
         return render_template("add.html")
 
 
-# todo - capturar esses caras e criar botões no HTML pra mostrar somente o livro que eu quiser editar/deletar
-# todo - usar os códigos comentados abaixo para implementar a funcionalidade
-# todo - personalizar um pouco melhor o site
-
-@app.route('/edit/<bookid>')
-def edit(bookid):
+@app.route('/edit/<link_id>', methods=["GET", "POST"])
+def edit(link_id):
     books = query_books()
-    bookid = int(bookid)
-    return render_template("edit.html", books=books, bookid=bookid)
-    # # Update a given entry:
-    # book_to_update = Book.query.filter_by(title="Harry Potter").first()      # Atualizar pro ID!
-    # book_to_update.title = "Harry Potter and the Chamber of Secrets"         # Retorno do HTML Form
-    # db.session.commit()
+    selected_book = find_book(books, link_id)
+
+    if request.method == "POST":
+        book_rating = request.form.get('rating')
+        print(book_rating)
+        book_to_update = Book.query.filter_by(bookid=link_id).first()
+        book_to_update.review = book_rating
+        db.session.commit()
+        return redirect(url_for('home'))
+
+    return render_template("edit.html", book=selected_book)
 
 
-@app.route('/delete/<bookid>')
-def delete(bookid):
+@app.route('/delete/<link_id>', methods=["GET", "POST"])
+def delete(link_id):
     books = query_books()
-    return render_template("delete.html", books=books, bookid=bookid)
-    # # Delete a given entry:
-    # book_id = 3
-    # book_to_delete = Book.query.get(book_id)      # Atualizar pro ID!
-    # db.session.delete(book_to_delete)             # Retorno do HTML Form
-    # db.session.commit()
+    selected_book = find_book(books, link_id)
+
+    if request.method == "POST":
+        book_to_delete = Book.query.get(link_id)
+        db.session.delete(book_to_delete)
+        db.session.commit()
+        return redirect(url_for('deletesuccess'))
+
+    return render_template("delete.html", book=selected_book)
+
+
+@app.route('/deletesuccess')
+def deletesuccess():
+    return render_template("deletesuccess.html")
 
 
 if __name__ == "__main__":
