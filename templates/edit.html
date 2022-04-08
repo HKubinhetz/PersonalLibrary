@@ -12,12 +12,15 @@
 </head>
 <body>
     <p>Here we'll edit a title from the booklist!</p>
-    <p>{{ book["title"] }} - {{ book["author"] }} - {{ book["rating"] }}/10</p>
+    <p class="bookinfo">{{ book["title"] }} - {{ book["author"] }} - {{ book["rating"] }}/10.0</p>
         <form action="" method="POST">
         <label>New Rating</label>
         <input type="text" name="rating">
-        <button type="submit">Review Rating</button>
+        <br>
+        <br>
+        <button type="submit" class="btn btn-warning btn-lg">Review Rating</button>
         <a href="/">Cancel</a>
         </form>
+
 </body>
 </html>

@@ -2,10 +2,33 @@ body {
     background-color: #00AAFF;
 }
 
-h1, h2, p, ul {
+h1, h2, p, ul, label {
     color: white;
+    padding: 10px;
 }
+
+label {
+    color: white;
+    padding-left: 15px;
+}
+
+.btn {
+    margin-left: 20px;
+}
+
+.action-btn {
+    margin-top: 20px;
+    margin-left: 110px;
+}
+
+.bookinfo {
+    font-weight: bold;
+    font-size: 1.5rem;
+    color: #FFD700;
+}
+
 
 a {
     color: #114b5f;
+    padding: 10px;
 }

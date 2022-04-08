@@ -11,17 +11,35 @@
 
 </head>
 <body>
+
+    <br>
+    <h2>Add a new book by filling the info below!</h2>
     <br>
     <form action="" method="POST">
-        <label>Book Name</label>
-        <input type="text" name="title">
-        <label>Book Author</label>
-        <input type="text" name="author">
-        <label>Rating</label>
-        <input type="text" name="rating">
+        <table>
+
+        <tr>
+        <td><label>Book Name</label></td>
+        <td><input type="text" name="title"></td>
+        </tr>
+
+        <tr>
+        <td><label>Book Author</label></td>
+        <td><input type="text" name="author"></td>
+        </tr>
+
+        <tr>
+        <td><label>Rating</label></td>
+        <td><input type="text" name="rating"></td>
+        </tr>
+
+        </table>
+
+
         <a href="//">
-        <button type="submit">Add Book</button>
+        <button class="btn btn-warning btn-lg action-btn" type="submit">Add Book</button>
         </a>
+
 
     </form>
 </body>
