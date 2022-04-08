@@ -21,6 +21,8 @@ It is a great exercise to practice every CRUD operation:
 ## Deleting Books
 ![Delete](https://user-images.githubusercontent.com/31540553/162501631-40ba20d2-b1e8-4bca-88d5-989eba6f492c.gif)
 
+## Code 
+Please visit the main.py code and check for comments on execution there, as it is well documented there and talking about it here would bring redundancy.
 
 ## Challenges
 An interesting challenge happened while building the CRUD operations. 
@@ -31,4 +33,4 @@ For instance, the first element of a list is always 0, but one can delete the fi
 This was a very fun exercise where it is possible to learn very important concepts about data operations, databases, flask rendering and even css formatting.
 
 ## Important
-If you have any doubts, please visit the code as it is very well documented. Feel free to contact me, it will be a pleasure to talk and learn with you!
+If you have any doubts, please visit the code as it is very well documented. Besides that, feel free to contact me, it will be a pleasure to talk and learn with you!
