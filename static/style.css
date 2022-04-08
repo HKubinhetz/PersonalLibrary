@@ -6,12 +6,13 @@ body {
 
 h1, h2, p, ul, label {
     color: white;
-    padding: 10px;
+    padding: 5px 10px 3px;
 }
 
 a {
     color: #114b5f;
     padding: 10px;
+    margin: 2px;
 }
 
 label {
@@ -24,6 +25,9 @@ label {
 .btn {
     margin-left: 20px;
 }
+
+.add-btn {
+    margin-left: 10px;
 
 .action-btn {
     margin-top: 20px;
