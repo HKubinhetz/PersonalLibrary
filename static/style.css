@@ -1,3 +1,5 @@
+/* ELEMENT SPECIFIC STYLING */
+
 body {
     background-color: #00AAFF;
 }
@@ -7,10 +9,17 @@ h1, h2, p, ul, label {
     padding: 10px;
 }
 
+a {
+    color: #114b5f;
+    padding: 10px;
+}
+
 label {
     color: white;
     padding-left: 15px;
 }
+
+/* CLASS SPECIFIC STYLING */
 
 .btn {
     margin-left: 20px;
@@ -27,8 +36,6 @@ label {
     color: #FFD700;
 }
 
-
-a {
-    color: #114b5f;
-    padding: 10px;
+.book {
+    font-weight: bold;
 }

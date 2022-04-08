@@ -22,7 +22,7 @@
 
         <ul>
             {% for book in books: %}
-                <li>{{ book["title"] }} - {{ book["author"] }} - {{ book["rating"] }}/10.0 </li>
+                <li class="book">{{ book["title"] }} - {{ book["author"] }} - {{ book["rating"] }}/10.0 </li>
                 <p><a href="/delete/{{book['bookid']}}">Delete</a> - <a href="/edit/{{book['bookid']}}">Edit Rating</a></p>
 
             {% endfor %}
