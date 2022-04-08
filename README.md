@@ -25,10 +25,10 @@ It is a great exercise to practice every CRUD operation:
 ## Challenges
 An interesting challenge happened while building the CRUD operations. 
 The entries manipulation have to be based on the ID instead of a list order inside the code. Otherwise wrong books will be accessed and modified.
-For instance, the first element of a list is always 0, but I can delete the first elements of a Database and the "new first" will have a different ID, which can lead to errors.
+For instance, the first element of a list is always 0, but one can delete the first elements of a Database and the "new first" will have a different ID, which can lead to errors.
 
 ## Conclusion
-This was a very fun exercise where I learned very important concepts about data operations, databases, flask rendering and even css formatting.
+This was a very fun exercise where it is possible to learn very important concepts about data operations, databases, flask rendering and even css formatting.
 
 ## Important
 If you have any doubts, please visit the code as it is very well documented. Feel free to contact me, it will be a pleasure to talk and learn with you!
