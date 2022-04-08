@@ -10,7 +10,7 @@ It is a great exercise to practice every CRUD operation:
 **1 - Create:** Adding Books\
 **2 - Read:** Reading Book Entries\
 **3 - Update:** Updating Book Ratings\
-**4 - Delete:** Deleting Book Entries\
+**4 - Delete:** Deleting Book Entries
 
 ## Creating and Reading Books
 ![Create](https://user-images.githubusercontent.com/31540553/162501575-8789eefe-c9a0-4e4b-bbfe-729e49150458.gif)
