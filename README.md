@@ -21,8 +21,8 @@ It is a great exercise to practice every CRUD operation:
 ## Deleting Books
 ![Delete](https://user-images.githubusercontent.com/31540553/162501631-40ba20d2-b1e8-4bca-88d5-989eba6f492c.gif)
 
-## Code 
-Please visit the main.py code and check for comments on execution there, as it is well documented there and talking about it here would bring redundancy.
+## Code
+Feel free to visit the main.py code and check for comments on execution there! I made an effort to be as thorough as possible with the documentation.
 
 ## Challenges
 An interesting challenge happened while building the CRUD operations. 
